@@ -1,5 +1,4 @@
 setup.py
-main/__init__.py
 main/sub.c
 main.egg-info/PKG-INFO
 main.egg-info/SOURCES.txt
