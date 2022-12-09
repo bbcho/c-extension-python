@@ -1,11 +1,14 @@
-from setuptools import setup, Extension
-import setuptools
+from setuptools import setup
+from setuptools.extension import Extension
 
-setup(name = "main",
-      # packages=setuptools.find_packages("src"),
-      # package_dir={"": "src"},
-      version = "0.1",
-      # packages=['risktools'],
-      # ext_package = 'main',
-      ext_modules = [Extension("main", ["sub.c"])]
-      );
+extensions = [
+    Extension(
+    name="sub", 
+    sources=["main/sub.c"])
+]
+
+setup(name='main',
+      # packages=['main'],
+      ext_package='main',
+      ext_modules = extensions,
+)

@@ -23,9 +23,9 @@ PyMethodDef method_table[] = {
 };
 
 // A struct contains the definition of a module
-PyModuleDef main_module = {
+PyModuleDef sub_module = {
     PyModuleDef_HEAD_INIT,
-    "main", // Module name
+    "main.sub", // Module name
     "This is the module docstring",
     -1, // Optional size of the module state memory
     method_table,
@@ -36,7 +36,7 @@ PyModuleDef main_module = {
 };
 
 // The module init function
-PyMODINIT_FUNC PyInit_main(void)
+PyMODINIT_FUNC PyInit_sub(void)
 {
-    return PyModule_Create(&main_module);
+    return PyModule_Create(&sub_module);
 }
