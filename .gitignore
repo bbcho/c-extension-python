@@ -2,3 +2,4 @@ env/
 build/
 .ipynb_checkpoint/
 *.egg-info/
+*.so
